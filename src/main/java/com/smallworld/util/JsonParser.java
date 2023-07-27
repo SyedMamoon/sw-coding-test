@@ -14,7 +14,7 @@ public class JsonParser {
     ObjectMapper mapper = new ObjectMapper();
 
     try {
-      File initialFile = new File(File_Path_Constants.TRANSACTION_JSON_FILE);
+      File initialFile = new File(FilePathConstants.TRANSACTION_JSON_FILE);
       return mapper.readValue(initialFile, new TypeReference<List<Transaction>>() {});
     } catch (IOException e) {
       throw new UnsupportedOperationException("Error occurred while reading transactions :" + e);
